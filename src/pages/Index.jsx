@@ -1,15 +1,31 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, Text, Image, Button, VStack, Link } from '@chakra-ui/react';
+import { FaMusic, FaGlobeAmericas, FaHeart } from 'react-icons/fa';
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <Box textAlign="center" fontSize="xl">
+      <VStack spacing={8}>
+        <Image
+          borderRadius="full"
+          boxSize="150px"
+          src="/images/beyonce.jpg"
+          alt="Beyonce"
+          m="auto"
+        />
+        <Text fontSize="4xl" fontWeight="bold">Beyoncé</Text>
+        <Text>Welcome to the official website of Beyoncé. Explore her music, tours, and philanthropy work.</Text>
+        <Button leftIcon={<FaMusic />} colorScheme="pink" variant="solid">
+          Music
+        </Button>
+        <Button leftIcon={<FaGlobeAmericas />} colorScheme="pink" variant="solid">
+          Tours
+        </Button>
+        <Button leftIcon={<FaHeart />} colorScheme="pink" variant="solid">
+          Philanthropy
+        </Button>
+      </VStack>
+    </Box>
+  );
 };
 
 export default Index;
